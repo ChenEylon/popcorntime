@@ -1,6 +1,7 @@
 import './home-page.css'
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 function HomePage({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -140,7 +141,7 @@ function HomePage({ images }) {
       <div>
         <h1 className="home-page-sec-title" style={{ marginBottom: '20px' }}>:המכונות שלנו</h1>
         <div class="wrapper">
-          <a className='a' href="#"><span>למכונות</span></a>
+          <Link className='a' to={'/products'}><span>למכונות</span></Link>
         </div>
       </div>
     </div>

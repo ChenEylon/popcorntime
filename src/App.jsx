@@ -3,6 +3,8 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./components/HomePage/HomePage";
+import { Products } from "./components/Products/Products";
+import { AboutUs } from "./components/AboutUs/AboutUs";
 
 function App() {
 
@@ -17,8 +19,10 @@ function App() {
   return (
     <div className="app-container">
       <Routes>
-        <Route element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route path="/" element={<HomePage images={images} />}></Route>
+          <Route path="/products" element={<Products/>}></Route>
+          <Route path="/aboutus" element={<AboutUs/>}></Route>
         </Route>
       </Routes>
     </div>
