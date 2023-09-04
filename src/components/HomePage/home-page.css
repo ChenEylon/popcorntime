@@ -1,7 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+.App-header {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  padding-bottom: 2rem;
+}
 .home-page-title{
     text-align: center;
 }
-.contact-me{
-    display: flex;
-    
+.carousel-images {
+  position: relative;
+  border-radius: 10px;
+  height: 400px;
+  max-width: 650px;
+  margin: auto;
+  overflow: hidden;
 }
+.carousel-images img {
+  width: 99%;
+  height: 99%;
+  border-radius: 8px;
+  border: #ff00008e solid 2px;
+}
+.slide_direction {
+  display: flex;
+  justify-content: space-between;
+}
+.left,
+.right {
+  background-color: #fb666675;
+  color: #fff;
+  padding: 10px 8px 8px 13px;
+  margin: 0 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 10px;
+  height: 25px;
+  width: 25px;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+.carousel-indicator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.dot {
+  background-color: #333;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.active {
+  background-color: #fa2020;
+}
+.home-page-sec-title {
+    margin-top: 20px;
+    text-align: center;
+}
+.home-page-about{
+    text-align: center;
+}
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  .a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+  }
+  
+  .a:hover{
+    color: #fff;
+  }
+  
+  .a:hover:after{
+    width: 100%;
+  }

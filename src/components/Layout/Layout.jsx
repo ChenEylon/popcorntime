@@ -6,14 +6,11 @@ function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State variable to track open/closed state
   const navigate = useNavigate();
   
-
-
-
   return (
     <div>
       <div className="navbar-container">
-        <Link id="navbar-logo-container" to={"/HomePage"}>
-        <div> LOGO</div>
+        <Link id="navbar-logo-container" to={"/"}>
+        <div> PopCorn</div>
         </Link>
       </div>
       <Menu
@@ -21,14 +18,13 @@ function Layout() {
         onStateChange={({ isOpen }) => setIsSidebarOpen(isOpen)}
         width={"250px"}
       >
-        <div>Hello User!</div>
         <Link
           to={"/"}
           id="home"
           className="menu-item"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
-          Home
+          עמוד הבית
         </Link>
         <Link
           to={"/"}
@@ -36,7 +32,7 @@ function Layout() {
           className="menu-item"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
-         Link 1
+         המוצרים שלנו
         </Link>
         <Link
           to={"/"}
@@ -44,7 +40,7 @@ function Layout() {
           className="menu-item"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
-          Link 2
+          עלינו
         </Link>
         <Link
           to={"/"}
@@ -52,7 +48,7 @@ function Layout() {
           className="menu-item"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
-          Link 3
+          צור קשר
           </Link>
       </Menu>
       <Outlet />
