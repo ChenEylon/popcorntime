@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useState,createContext } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./components/HomePage/HomePage";
 import { Products } from "./components/Products/Products";
 import { AboutUs } from "./components/AboutUs/AboutUs";
+import  Contactus  from "./components/contactus/Contactus";
+
+export const modeContext = createContext();
+
+ 
 
 function App() {
-
+ const [colorMode, setColorMode] = useState("light");
   const images = [
     "https://verbnow.com/wp-content/uploads/2021/06/types-of-popcorn-makers-june132021.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDVJvLVs5_1EarqeHI5kz8YeDwIUJRo9heWA&usqp=CAU",
@@ -17,15 +22,18 @@ function App() {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6kTHY9SZCGtmLI9JKpJ3PyP5xS5gvMyXV0Q&usqp=CAU",
   ];
   return (
+    <modeContext.Provider value={{ colorMode, setColorMode }}>
     <div className="app-container">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<HomePage images={images} />}></Route>
           <Route path="/products" element={<Products/>}></Route>
           <Route path="/aboutus" element={<AboutUs/>}></Route>
+          <Route path="/contactus" element={<Contactus />}></Route>
         </Route>
       </Routes>
     </div>
+    </modeContext.Provider >
   );
 }
 

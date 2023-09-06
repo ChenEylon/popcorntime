@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+#contact-page{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5vw;
+    direction: rtl;
+}
+
+#contact-header{
+    width: 100%;
+    height: 10vw;
+    text-align: center;
+    color: var(--page-header);
+    font-weight: bold;
+}
+.contact-sub-titile{
+    color: var(--regular-text);
+}
+
+#contact-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-inputs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-input-field{
+    width: 100%;
+    border: 3px solid white;
+}
+
+#contact-name-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 10px;
+    /* border: 3px solid white; */
+}
+
+.contact-input-field{
+    border-color: white !important;
+    border: 5px solid;
+    width: 100%;
+    background-color: var(--add-parking-container);
+}
+#contact-Email-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 10px;
+}
+#contact-complaint-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#contact-button-container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#contact-submit-complaint{
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--button-background);
+    height: 48px;
+    width: 312px;
+    color: var(--button-text);
+    font-size: large;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.parkit-info-line{
+    display: flex;
+}
+.icon-parkit-line{
+    height: 3vh;
+    margin-right: 1vw;
+}
+.email-link-info{
+    font-size: 18px;
+    color: var(--contact-link-text);
+}
+.image-contact{
+    height: 150px;
+}
+
+
+@media screen and (min-width: 590px){
+    #contact-header{
+        height: 60px;
+    }
+    .contact-input-field{
+        width: 460px;
+    }
+  }

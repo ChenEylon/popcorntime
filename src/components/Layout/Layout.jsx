@@ -44,7 +44,7 @@ function Layout() {
           עלינו
         </Link>
         <Link
-          to={"/"}
+          to={"/contactus"}
           id="contact"
           className="menu-item"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -76,7 +76,7 @@ function Layout() {
 
               </CDBBox>
             </CDBBox>
-            <CDBBox>
+            <CDBBox className="box2">
               <p className="h5 mb-4" style={{ fontWeight: '600',direction:'rtl' }}>
                 האתר שלנו
               </p>
@@ -87,7 +87,7 @@ function Layout() {
                 <Link to={'/products'}> הציוד שלנו</Link>
               </CDBBox>
             </CDBBox>
-            <CDBBox>
+            <CDBBox className="box3">
               <p className="h5 mb-4" style={{ fontWeight: '600',direction:'rtl' }}>
                 דרכי קשר מהירים
               </p>
